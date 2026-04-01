@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SpaceLab | Explore Space</title>
+  <meta name="description" content="A modern beginner-friendly site to learn about space and the planets in our solar system." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Go to homepage">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-name">SpaceLab</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">Planets</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Welcome to SpaceLab</p>
+          <h1>Learn space the fun way — one planet at a time.</h1>
+          <p class="lead">
+            Explore the solar system with clean visuals, bite-size facts, and quick comparisons.
+            Start with the planets page to begin your journey.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="about.html">Explore the planets</a>
+            <a class="btn btn-ghost" href="#what-youll-learn">What you’ll learn</a>
+          </div>
+
+          <div class="stats" aria-label="Site highlights">
+            <div class="stat">
+              <div class="stat-number">8</div>
+              <div class="stat-label">Planets</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">∞</div>
+              <div class="stat-label">Curiosity</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">0</div>
+              <div class="stat-label">Boring facts</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card" role="img" aria-label="A stylized space card showing orbits and stars">
+          <div class="space-graphic">
+            <div class="orbit o1"><span class="planet p1"></span></div>
+            <div class="orbit o2"><span class="planet p2"></span></div>
+            <div class="orbit o3"><span class="planet p3"></span></div>
+            <div class="sun"></div>
+            <div class="stars" aria-hidden="true"></div>
+          </div>
+          <p class="card-caption">Tip: Click <strong>Planets</strong> to see quick facts and comparisons.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="what-youll-learn" class="section">
+      <div class="container">
+        <h2>What you’ll learn</h2>
+        <p class="section-subtitle">
+          A short, friendly overview — perfect for a school project and still nice enough to feel “real.”
+        </p>
+
+        <div class="grid-3">
+          <article class="feature">
+            <h3>Planet basics</h3>
+            <p>Size, distance from the Sun, day length, year length, and atmosphere in plain English.</p>
+          </article>
+          <article class="feature">
+            <h3>Cool facts</h3>
+            <p>Fun facts that stick — like which planet spins sideways or has the longest day.</p>
+          </article>
+          <article class="feature">
+            <h3>Quick comparisons</h3>
+            <p>Simple “at a glance” stats so you can compare planets without reading a textbook.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="container cta">
+        <div>
+          <h2>Ready to start exploring?</h2>
+          <p class="lead">Head to the planets page and pick your favorite world.</p>
+        </div>
+        <a class="btn btn-primary" href="about.html">Go to Planets</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> SpaceLab. Built with HTML + CSS.</p>
+      <p class="muted">Made for learning — not affiliated with NASA.</p>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>

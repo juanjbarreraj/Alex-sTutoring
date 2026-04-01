@@ -1,0 +1,204 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #0000ff, #ff0000);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: yellow;
+    transform: scale(1.1);
+}
+
+/* HERO SECTION */
+.hero {
+    background-image: url("https://images.unsplash.com/photo-1601924582975-7e95a6a7e90f");
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* BUTTON STYLE */
+.btn {
+    background-color: #90c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff9900;
+    transform: scale(1.1);
+}
+
+/* FLEXBOX LAYOUT */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+/* GRID LAYOUT */
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.menu-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #0000ff;
+    text-align: center;
+}
+
+.menu-item:hover {
+    background-color: #ffe0b3;
+}
+
+/* TABLE */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid #0000ff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* FORM */
+form {
+    width: 60%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea, select {
+    padding: 10px;
+    border: 2px solid #0000ff;
+}
+
+footer {
+    background-color: #0000ff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+/* PROMO SECTION */
+.promo-section {
+    background-color: #ffe0b3;
+    padding: 60px 20px;
+}
+
+.promo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.promo-img {
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.promo-text {
+    max-width: 500px;
+}
+
+.promo-text h2 {
+    font-size: 2rem;
+    color: #0000ff;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .promo-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .promo-img {
+        width: 90%;
+    }
+}

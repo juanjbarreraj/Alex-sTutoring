@@ -1,0 +1,49 @@
+<html>
+<head>
+    <!--Style Sheet-->
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+
+    <!--Bootstrap-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+
+    <title>Library</title>
+
+    <h1 class="pages-text-center">Library Screen</h1>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="table"></div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="home-button">
+                <button class="btn btn-secondary" onclick="window.location.href='LibraryAdd.html'">Add Library</button>
+                <button class="btn btn-secondary" onclick="window.location.href='libraryUpdate.html'">Update Library</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+    <!-- This is for toast messages-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="./js/jquery.toaster.js"></script>
+
+    <!-- Load Grid.js after the container is set up -->
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <!-- Load getLibrary.js after Grid.js -->
+    <script src="./js/getLibrary.js"></script>
+
+</body>
+</html>
