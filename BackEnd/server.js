@@ -2,13 +2,13 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
-const libraryRoutes = require("./src/restaurants/routes");
+const restaurantRoutes = require("./src/restaurants/routes");
 
 const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors()); // simple + works with Netlify
+app.use(cors());
 
 // Health check
 app.get("/", (req, res) => {
@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 });
 
 // Routes
-app.use("/api/v1/library", libraryRoutes);
+app.use("/api/v1/restaurants", restaurantRoutes);
 
 // IMPORTANT for Render
 const PORT = process.env.PORT || 8004;
