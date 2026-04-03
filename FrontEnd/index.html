@@ -1,49 +1,74 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!--Style Sheet-->
-    <link rel="stylesheet" href="./stylesheets/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--Bootstrap-->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="./stylesheets/style.css" />
 
-    <title>Library</title>
+  <!-- Fonts / Libraries -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 
-    <h1 class="pages-text-center">Library Screen</h1>
-
+  <title>Restaurants</title>
 </head>
 
 <body>
-    <div class="container">
-        <div id="table"></div>
-    </div>
+  <main class="page restaurants-page">
+    <header class="page-header text-center py-4">
+      <div class="container">
+        <h1 class="page-title">Restaurants Directory</h1>
+        <p class="page-subtitle">Browse, search, and manage restaurant records.</p>
+      </div>
+    </header>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="home-button">
-                <button class="btn btn-secondary" onclick="window.location.href='LibraryAdd.html'">Add Library</button>
-                <button class="btn btn-secondary" onclick="window.location.href='libraryUpdate.html'">Update Library</button>
-            </div>
+    <section class="page-content">
+      <div class="container">
+        <div class="table-section">
+          <div id="table"></div>
         </div>
-    </div>
+      </div>
+    </section>
 
+    <section class="page-actions py-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="action-buttons d-flex flex-wrap justify-content-center gap-3">
+            <button
+              class="btn btn-secondary action-btn"
+              onclick="window.location.href='RestaurantsAdd.html'"
+            >
+              Add Restaurant
+            </button>
 
-    <!-- CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+            <button
+              class="btn btn-secondary action-btn"
+              onclick="window.location.href='RestaurantsUpdate.html'"
+            >
+              Update Restaurant
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- This is for toast messages-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="./js/jquery.toaster.js"></script>
+  <!-- CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 
-    <!-- Load Grid.js after the container is set up -->
-    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-    <!-- Load getLibrary.js after Grid.js -->
-    <script src="./js/getLibrary.js"></script>
+  <!-- Toast messages -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="./js/jquery.toaster.js"></script>
 
+  <!-- Grid.js -->
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
+  <!-- Page script -->
+  <script src="./js/getRestaurants.js"></script>
 </body>
 </html>

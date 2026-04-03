@@ -10,16 +10,23 @@ formEl.addEventListener("submit", async (event) => {
   delete data.id;
 
   if (!id) {
-    $.toaster({ priority: "danger", title: "Error", message: "Missing ID" });
+    $.toaster({
+      priority: "danger",
+      title: "Error",
+      message: "Missing ID",
+    });
     return;
   }
 
   try {
-    const res = await fetch(`https://michael-sbackend.onrender.com/api/v1/library/${id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+    const res = await fetch(
+      `https://restaurantsbackend.onrender.com/api/v1/restaurants/${id}`,
+      {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    );
 
     console.log("Status:", res.status);
 
@@ -30,9 +37,17 @@ formEl.addEventListener("submit", async (event) => {
       throw new Error(responseData?.error || "Update failed");
     }
 
-    $.toaster({ priority: "success", title: "Library", message: "Updated" });
+    $.toaster({
+      priority: "success",
+      title: "Restaurants",
+      message: "Restaurant updated successfully",
+    });
   } catch (err) {
     console.error(err);
-    $.toaster({ priority: "danger", title: "Error", message: err.message });
+    $.toaster({
+      priority: "danger",
+      title: "Error",
+      message: err.message,
+    });
   }
 });
